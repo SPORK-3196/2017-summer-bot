@@ -7,6 +7,8 @@
 
 package frc.robot;
 
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.command.Command;
@@ -28,6 +30,8 @@ public class Robot extends TimedRobot {
   public static OI m_oi;
   public static XboxController controller0 = new XboxController(0);
   public static XboxController controller1 = new XboxController(1);
+
+  public static UsbCamera cam0 = CameraServer.getInstance().startAutomaticCapture(0);
 
   public static Drivetrain drivetrain = new Drivetrain();
   public static Intake intake = new Intake();
